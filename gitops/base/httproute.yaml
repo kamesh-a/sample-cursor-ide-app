@@ -1,0 +1,21 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: sample-route
+  labels:
+    app: sample-serve
+spec:
+  parentRefs:
+  - name: sample-gateway
+    kind: Gateway
+  hostnames:
+  - "sample.example.com"
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: sample-serve
+      kind: Service
+      port: 80

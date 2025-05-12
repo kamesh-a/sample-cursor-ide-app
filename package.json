@@ -1,0 +1,12 @@
+{
+  "name": "sample-serve",
+  "version": "1.0.0",
+  "main": "sample-serve.js",
+  "scripts": {
+    "start": "node sample-serve.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
