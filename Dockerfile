@@ -1,5 +1,5 @@
 # Use the official Node.js LTS image with security updates
-FROM node:20-alpine-slim
+FROM node:20-alpine
 
 # Set the working directory
 WORKDIR /usr/src/app
